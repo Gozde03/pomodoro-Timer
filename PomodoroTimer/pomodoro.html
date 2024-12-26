@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: rgb(3, 8, 63);
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgb(6, 17, 87);
+            padding: 5rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: 1.3rem;
+        }
+
+        .timer-circles {
+            font-size: 5rem;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+        }
+        .circle{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                border: 10px solid #4c91afb9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5rem;
+            }
+            .label {
+                font-size: 2rem;
+                margin-top: 1rem;
+                color: #ffffff;
+            }
+    
+            .buttons {
+                margin-top: 2rem;
+            }  
+            button {
+                padding: 10px 20px;
+                margin: 0 10px;
+                font-size: 1rem;
+                cursor: pointer;
+                background-color: #4f4caf;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                transition: background-color 0.3s;
+            }
+    
+            button:hover {
+                background-color: #4b32b1;
+            }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color:white">Pomodoro Timer</h1>
+        <div class="timer-circles">
+            <div>
+                <div class="circle" id="minutesCircle">
+                    <span id="minutes" style="color:white;">25</span>
+                </div>
+                <div class="label">Minutes</div>
+            </div>
+            <div>
+                <div class="circle" id="secondsCircle">
+                    <span id="seconds" style="color:white">00</span>
+                </div>
+                <div class="label">Seconds</div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+            <button id="shortBreakBtn">Short Break</button>
+            <button id="longBreakBtn">Long Break</button>
+        </div>
+    </div>
+
+    <script src="./pomodoro.js"></script>
+
+</body>
+</html>
